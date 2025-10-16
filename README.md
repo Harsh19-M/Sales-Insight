@@ -4,9 +4,15 @@
 
 ## Executive Summary:
 
+Company: AtliQ Hardware <br>
+Industry: Computer Hardware & Peripherals<br>
+Head Office: Delhi, India<br>
+Key Stakeholder: Bhavin Patel, Sales Director<br>
+
 Using SQL and Power BI, this project builds an interactive sales dashboard for AtliQ Hardware — a computer hardware manufacturer facing fragmented, unreliable sales reports.
 
-The dashboard consolidates sales data from multiple sources to help the Sales Director, Bhavin Patel, easily track key KPIs, identify performance trends, and make faster, data-driven decisions.
+The dashboard consolidates sales data from multiple sources to help the Sales Director, Bhavin Patel, easily track key KPIs, identify performance trends, and make faster, 
+data-driven decisions.
 
 Key Outcomes:
 
@@ -17,19 +23,16 @@ Key Outcomes:
 
 ## Business Problem:
 
-Company: AtliQ Hardware <br>
-Industry: Computer Hardware & Peripherals<br>
-Head Office: Delhi, India<br>
-Key Stakeholder: Bhavin Patel, Sales Director<br>
-
 Context:
-AtliQ Hardware supplies computer components and peripherals to major retail clients across India. As the market expands rapidly, the company struggles to track and analyze sales performance effectively across its regional divisions (North, South, and Central India).
+AtliQ Hardware supplies computer components and peripherals to major retail clients across India. As the market expands rapidly, the company struggles to track and analyze 
+sales performance effectively across its regional divisions (North, South, and Central India).
 
 Problem Statement:
-Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Fragmented Excel files and inconsistent manual reporting from regional managers prevent timely and reliable business insights.
+Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Fragmented Excel files and inconsistent manual reporting from regional managers prevent timely and 
+reliable business insights.
+
 
 Key Challenges:
-
 1. Lack of Data-Backed Insights: No single source of truth for performance by region, customer, or product category.
 2. Inefficient Reporting: Manual Excel reports and verbal updates delay decision-making.
 3. Sales Decline Despite Market Growth: Missed opportunities due to poor visibility and unstructured data.
