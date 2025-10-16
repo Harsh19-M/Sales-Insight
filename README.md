@@ -32,37 +32,23 @@ Growth vs Overall Sales - Despite market growth, overall sales have been declini
 ### Methodology:
 For Project Planning - Using AIMS Grid - Assumptions|Information|Methodology|Solutions
 
-SQL quereies that uses such and such functions and does...
+SQL quereies that do such and such things to extract, explore data...
 
-Power BI dashboard that uses such and such tools and does...
+Power BI dashboard that is interactive and...
 
 
 ### Skills:
 
-SQL:
+SQL: Joins, Aggregate functions, Case, Maybe Window Functions, (Maybe CTEs or Temp Tables)...
 
-POwer BI: 
+POwer BI: All the relevant Tools used...
 
 
 ### Results & Business Recommnedation: 
+W.e Relevant results we found goes here...
 
 
 ### Next Steps: 
 Waht would you work on if you had more time to work on this project - would you try different things, what're you thinking about next? Outside the Scope of just this Project. Thinking long-term and holistically about this Business. Also adress any limitations here data limitations|project limitations.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
