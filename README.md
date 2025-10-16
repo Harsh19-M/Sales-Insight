@@ -35,47 +35,35 @@ Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Frag
 3. **Sales Decline Despite Market Growth:** Missed opportunities due to poor visibility and unstructured data.
 
 
-## Project Objective
-
-To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales data into a single, automated view — enabling Bhavin Patel to:
-
-* Monitor KPIs such as revenue, sales by region, and product performance
-* Identify weak regions and declining product categories
-* Make faster, data-driven decisions to improve overall sales efficiency
-
-
 ## Methodology:
 
 **Framework Used:** AIMS Grid *(Assumptions | Information | Methodology | Solutions)*
 
-**Approach:**
+**Approach**
 
 1. **Data Extraction (SQL):**
+   - Collected and merged multiple Excel datasets.
+   - Used SQL queries to clean, aggregate, and transform raw data.
 
-   * Collected and merged multiple Excel datasets.
-   * Used SQL queries to clean, aggregate, and transform raw data.
 2. **Data Modeling (Power BI):**
-
-   * Established relationships between sales, customers, and products tables.
-   * Created calculated columns and measures for KPIs.
+   - Established relationships between sales, customers, and products tables.
+   - Created calculated columns and measures for KPIs.
+   - 
 3. **Visualization:**
-
-   * Built an interactive Power BI dashboard for dynamic exploration and insights.
+   - Built an interactive Power BI dashboard for dynamic exploration and insights.
 
 **Data Flow:**
 Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboard
 
 
-## Skills & Tools
-
-**Languages / Tools:**
+## Skills:
 
 * **SQL:** Joins, aggregate functions, CASE statements, window functions (if applicable)
 * **Power BI:** DAX, data modeling, measures, calculated columns, and dynamic dashboards 
 * **Data Analysis:** Cleaning, transformation, KPI design, trend analysis, storytelling
 
 
-## Results & Business Recommendations
+## Results & Business Recommendations:
 
 *(Placeholder – to be filled once analysis & dashboard visuals are finalized)*
 
