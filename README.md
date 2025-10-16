@@ -30,7 +30,7 @@ Challenge 3:
 Growth vs Overall Sales - Despite market growth, overall sales have been declining.
 
 ### Methodology:
-For Project Planning - Using AIMS Grid - Assumptions|Information|Methodology|Solutions
+For Project Planning - Using AIMS Grid - | Assumptions | Information | Methodology | Solutions |
 
 SQL quereies that do such and such things to extract, explore data...
 
