@@ -1,13 +1,13 @@
 
 # Sales Insights Case Study – AtliQ Hardware
-**A Data-Driven sales performance dashboard built using SQL and Power BI**
+**A Data-Driven Sales Performance Dashboard built using SQL and Power BI**
 
 ## Executive Summary:
 
-Company: AtliQ Hardware <br>
-Industry: Computer Hardware & Peripherals<br>
-Head Office: Delhi, India<br>
-Key Stakeholder: Bhavin Patel, Sales Director<br>
+**Company**: AtliQ Hardware <br>
+**Industry**: Computer Hardware & Peripherals<br>
+**Head Office**: Delhi, India<br>
+**Key Stakeholder**: Bhavin Patel, Sales Director<br>
 
 Using SQL and Power BI, this project builds an interactive sales dashboard for AtliQ Hardware — a computer hardware manufacturer facing fragmented, unreliable sales reports.
 
