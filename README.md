@@ -1,10 +1,8 @@
 
-# 📉📈 Sales Insights Case Study – AtliQ Hardware
-
+# Sales Insights Case Study – AtliQ Hardware
 *A data-driven sales performance dashboard built using SQL and Power BI*
 
-
-## 📄 Executive Summary
+## Executive Summary:
 
 Using **SQL** and **Power BI**, this project builds an **interactive sales dashboard** for *AtliQ Hardware* — a computer hardware manufacturer facing fragmented, unreliable sales reports.
 
@@ -17,7 +15,7 @@ The dashboard consolidates sales data from multiple sources to help the **Sales 
 * Improved sales visibility and data-driven decision-making
 
 
-## 💼 Business Problem
+## Business Problem:
 
 **Company:** AtliQ Hardware
 **Industry:** Computer Hardware & Peripherals
@@ -46,7 +44,7 @@ To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales
 * Make faster, data-driven decisions to improve overall sales efficiency
 
 
-## 🔍 Methodology
+## Methodology:
 
 **Framework Used:** AIMS Grid *(Assumptions | Information | Methodology | Solutions)*
 
@@ -68,7 +66,7 @@ To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales
 Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboard
 
 
-## 🧠 Skills & Tools
+## Skills & Tools
 
 **Languages / Tools:**
 
@@ -96,11 +94,10 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 *(Insert visuals or screenshots from Power BI dashboard here once ready)*
 
 
-## 🚀 Next Steps
+## Next Steps:
 
 * Integrate additional KPIs (e.g., profit margins, customer retention)
 * Automate data refreshes using SQL and Power BI scheduling
 * Address data limitations and ensure completeness
 * Explore predictive modeling for sales forecasting
 * Expand dashboard access across departments for unified reporting
-=
