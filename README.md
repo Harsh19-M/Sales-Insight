@@ -80,7 +80,7 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 *(Placeholder – to be filled once analysis & dashboard visuals are finalized)*
 
 **Results:**
-
+ 
 * Identified top-performing regions and customers
 * Highlighted areas of revenue decline and underperforming products
 * Delivered clear insights for strategic decision-making
