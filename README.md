@@ -71,7 +71,7 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 **Languages / Tools:**
 
 * **SQL:** Joins, aggregate functions, CASE statements, window functions (if applicable)
-* **Power BI:** DAX, data modeling, measures, calculated columns, and dynamic dashboards
+* **Power BI:** DAX, data modeling, measures, calculated columns, and dynamic dashboards 
 * **Data Analysis:** Cleaning, transformation, KPI design, trend analysis, storytelling
 
 
