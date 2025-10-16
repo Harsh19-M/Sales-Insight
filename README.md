@@ -1,6 +1,6 @@
 
 # Sales Insights Case Study – AtliQ Hardware
-*A data-driven sales performance dashboard built using SQL and Power BI*
+*A Data-Driven sales performance dashboard built using SQL and Power BI*
 
 ## Executive Summary:
 
