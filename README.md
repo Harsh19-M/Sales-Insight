@@ -35,7 +35,7 @@ Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Frag
 3. **Sales Decline Despite Market Growth:** Missed opportunities due to poor visibility and unstructured data.
 
 
-## 🎯 Project Objective
+## Project Objective
 
 To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales data into a single, automated view — enabling Bhavin Patel to:
 
@@ -75,7 +75,7 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 * **Data Analysis:** Cleaning, transformation, KPI design, trend analysis, storytelling
 
 
-## 📊 Results & Business Recommendations
+## Results & Business Recommendations
 
 *(Placeholder – to be filled once analysis & dashboard visuals are finalized)*
 
