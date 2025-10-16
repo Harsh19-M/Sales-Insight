@@ -17,10 +17,10 @@ The dashboard consolidates sales data from multiple sources to help the **Sales 
 
 ## Business Problem:
 
-**Company:** AtliQ Hardware <n>
-**Industry:** Computer Hardware & Peripherals
-**Head Office:** Delhi, India
-**Key Stakeholder:** Bhavin Patel, Sales Director
+**Company:** AtliQ Hardware <br>
+**Industry:** Computer Hardware & Peripherals<br>
+**Head Office:** Delhi, India<br>
+**Key Stakeholder:** Bhavin Patel, Sales Director<br>
 
 **Context:**
 AtliQ Hardware supplies computer components and peripherals to major retail clients across India. As the market expands rapidly, the company struggles to track and analyze sales performance effectively across its regional divisions (North, South, and Central India).
