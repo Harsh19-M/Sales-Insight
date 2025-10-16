@@ -1,5 +1,4 @@
 # Sales Insights Case Study – AtliQ Hardware 
-A Data-Driven Solution empowering AtliQ Hardware to turn sales data into actionable insights  
 
 ## Executive Summary: 
 Using SQL and Power BI I built an an Interactive Dashboard that consolidates AtliQ Hardware (Mock Company) sales data from multiple sources. This will help the sales director
