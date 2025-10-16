@@ -9,9 +9,7 @@
 **Head Office**: Delhi, India<br>
 **Key Stakeholder**: Bhavin Patel, Sales Director<br>
 
-Using SQL and Power BI, this project builds an interactive sales dashboard for AtliQ Hardware — a computer hardware manufacturer facing fragmented, unreliable sales reports.
-
-The dashboard consolidates sales data from multiple sources to help the Sales Director, Bhavin Patel, easily track key KPIs, identify performance trends, and make faster, 
+Using SQL and Power BI, this project builds an interactive sales dashboard for AtliQ Hardware — a computer hardware manufacturer facing fragmented, unreliable sales reports. The dashboard consolidates sales data from multiple sources to help the Sales Director, Bhavin Patel, easily track key KPIs, identify performance trends, and make faster, 
 data-driven decisions.
 
 Key Outcomes:
