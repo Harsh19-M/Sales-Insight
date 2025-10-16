@@ -3,7 +3,6 @@
 **A data-driven sales performance dashboard built using SQL and Power BI**
 
 
-
 ## 📄 Executive Summary
 
 Using **SQL** and **Power BI**, this project builds an **interactive sales dashboard** for *AtliQ Hardware* — a computer hardware manufacturer facing fragmented, unreliable sales reports.
@@ -15,8 +14,6 @@ The dashboard consolidates sales data from multiple sources to help the **Sales 
 * Centralized, accurate view of company-wide sales performance
 * Automated reporting with real-time insights
 * Improved sales visibility and data-driven decision-making
-
----
 
 ## 💼 Business Problem
 
@@ -37,7 +34,6 @@ Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Frag
 2. **Inefficient Reporting:** Manual Excel reports and verbal updates delay decision-making.
 3. **Sales Decline Despite Market Growth:** Missed opportunities due to poor visibility and unstructured data.
 
----
 
 ## 🎯 Project Objective
 
@@ -47,7 +43,6 @@ To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales
 * Identify weak regions and declining product categories
 * Make faster, data-driven decisions to improve overall sales efficiency
 
----
 
 ## 🔍 Methodology
 
@@ -70,7 +65,6 @@ To build an **interactive Power BI dashboard** that consolidates AtliQ’s sales
 **Data Flow:**
 Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboard
 
----
 
 ## 🧠 Skills & Tools
 
@@ -80,7 +74,6 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 * **Power BI:** DAX, data modeling, measures, calculated columns, and dynamic dashboards
 * **Data Analysis:** Cleaning, transformation, KPI design, trend analysis, storytelling
 
----
 
 ## 📊 Results & Business Recommendations
 
@@ -100,7 +93,6 @@ Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboar
 
 *(Insert visuals or screenshots from Power BI dashboard here once ready)*
 
----
 
 ## 🚀 Next Steps
 
