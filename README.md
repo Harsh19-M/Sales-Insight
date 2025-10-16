@@ -48,7 +48,7 @@ Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Frag
 2. **Data Modeling (Power BI):**
    - Established relationships between sales, customers, and products tables.
    - Created calculated columns and measures for KPIs.
-   - 
+   
 3. **Visualization:**
    - Built an interactive Power BI dashboard for dynamic exploration and insights.
 
