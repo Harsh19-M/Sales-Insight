@@ -9,7 +9,6 @@ The Goal is to build an Interactive Dashboard that consolidates AtliQ Hardware s
 easily track key KPIs, identify performance trends, and make faster, data-driven decisions to improve overall sales efficiency. 
 
 ### Business Problem: 
-
 Company: AtliQ Hardware
 Industry: Computer Hardware & Peripherals
 Head Office: Delhi, India
@@ -45,8 +44,11 @@ POwer BI: All the relevant Tools used...
 
 
 ### Results & Business Recommnedation: 
-W.e Relevant results we found goes here...
+What are all the things Business Stakeholders care about? If it's a Product Project then think off stuff you'd speak with to the Product Manager 
+But given ours is a Sales Insight Porject then suff we'll talk about witht the sales Director - Bhavin Patel (the one who gave you this mock project), maybe even stuff you'd
+discuss with the Sales Manager etc. 
 
+W.e Relevant^^ Answers and results we found + Disscussions goes here...
 
 ### Next Steps: 
 Waht would you work on if you had more time to work on this project - would you try different things, what're you thinking about next? Outside the Scope of just this Project. Thinking long-term and holistically about this Business. Also adress any limitations here data limitations|project limitations.
