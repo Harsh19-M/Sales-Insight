@@ -48,7 +48,7 @@ What are all the things Business Stakeholders care about? If it's a Product Proj
 But given ours is a Sales Insight Porject then suff we'll talk about witht the sales Director - Bhavin Patel (the one who gave you this mock project), maybe even stuff you'd
 discuss with the Sales Manager etc. 
 
-W.e Relevant^^ Answers and results we found + Disscussions goes here...
+W.e Relevant stuff - Answers and results we found + Disscussions goes here...
 
 ### Next Steps: 
 Waht would you work on if you had more time to work on this project - would you try different things, what're you thinking about next? Outside the Scope of just this Project. Thinking long-term and holistically about this Business. Also adress any limitations here data limitations|project limitations.
