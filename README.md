@@ -60,7 +60,7 @@ Wrote SQL Queries (In MySQL DB) to gather sales insight about AtliQ Hardware:
 select* from sales.customers; select* from sales.date; select* from sales.markets; select* from sales.products; select* from sales.transactions;
 
 /*1) First and Foremost we wanted to know how many transcations took place - Like In Total - so we can use the .count()*/
-select count(sales_qty) as "Total Transactions"
+<br>select count(sales_qty) as "Total Transactions" 
 from sales.transactions;
 /*Or could have even simply done THIS:*/
 select count(*) as "Total Transactions"
@@ -69,7 +69,7 @@ from sales.transactions;
 
 
 /*2) No. of Total Records from the Customers Table:  */
-select count(*) as "Number of Total Records (Customers)"
+<br>select count(*) as "Number of Total Records (Customers)"
 from sales.customers;
 /*OR*/
 select count(customer_code) as "Number of Total Records (Customers)"
@@ -78,30 +78,30 @@ from sales.customers;
 
 
 /*3) We want to see Transactions only from Chennai*/
-select* from sales.markets; /*Running this query must give us details about the Markets - Areas of Business*/
+<br>select* from sales.markets; /*Running this query must give us details about the Markets - Areas of Business*/
 /*So we know now that markets_name - Chennai is associated with markets_code = Mark001 */
 select* from sales.transactions;
 
 /*So lets run our Analysis Query to find more about the transactions in Chennai*/
-select*
+<br>select*
 from sales.transactions as T
 join sales.markets as M on T.market_code = M.markets_code
 where markets_code = 'Mark001';
 
 /*OR could have simply done - no need for a join - but using a join gives us more info from both transactions and Markets*/
-select*
+<br>select*
 from sales.transactions
 where market_code = "Mark001";
 
 /*If we wanted the total number Transactions in chennai then we do this: */
-
+<br>
 select count(*) as "Total Transactions in Chennai"
 from sales.transactions
 where market_code = 'Mark001';
 
 
 /*4) Now we want to know within the transactions - How many transactions have happened using USD currency*/
-select*
+<br>select*
 from sales.transactions 
 where currency = "USD";
 /*So we know the details of the 2 transactions that took place in USD currency*/
@@ -112,17 +112,14 @@ where currency = "USD";
 
 
 /*5) Show Transactions only in 2020 joined with the date table*/
-
-select* from sales.date; select* from sales.transactions;
-
-select*
+<br>select*
 from sales.transactions as T
 inner join sales.date as D on D.date = T.order_date
 where D.year = 2020;
 
 /*AND if we only want a count of how many total transactions took place only in the year 2020*/
 
-select count(*) as "Total Transactions in Year 2020"
+<br>select count(*) as "Total Transactions in Year 2020"
 from sales.transactions as T 
 inner join sales.date as D on D.date = T.order_date
 where D.year = 2020;
@@ -130,21 +127,20 @@ where D.year = 2020;
 
 
 /*6) We want to know total Revenue Generated only in the year 2020*/
-
-select sum(T.sales_amount) as "Total Revenue in 2020"
+<br>select sum(T.sales_amount) as "Total Revenue in 2020"
 from sales.transactions as T
 join sales.date as D on D.date = T.order_date
 where D.year = 2020;
 
-/*SO we know now that Total Revenue genereated in the year 2020 is = '142235559' INR - in Indian Rupees*/
+<br>/*SO we know now that Total Revenue genereated in the year 2020 is = '142235559' INR - in Indian Rupees*/
 
-/*Also the same thing we can do for the year 2019 or 2018*/
-select sum(T.sales_amount) as "Total Revenue 2019"
+<br>/*Also the same thing we can do for the year 2019 or 2018*/
+<br>select sum(T.sales_amount) as "Total Revenue 2019"
 from sales.transactions as T
 join sales.date as D on D.date = T.order_date
 where D.year = 2019 and T.currency = "INR";
 
-select sum(T.sales_amount) as "Total Revenue 2018"
+<br>select sum(T.sales_amount) as "Total Revenue 2018"
 from sales.transactions as T
 join sales.date as D on D.date = T.order_date
 where D.year = 2018 and T.currency = "INR";
@@ -152,7 +148,7 @@ where D.year = 2018 and T.currency = "INR";
 
 
 /* 7) We want to know the Total Revenue Generated only from/in Chennai in the year 2020 */
-select sum(T.sales_amount) as "Total Transactions - Chennai (2020)"
+<br>select sum(T.sales_amount) as "Total Transactions - Chennai (2020)"
 from sales.transactions as T
 join sales.markets as M on M.markets_code = T.market_code
 join sales.date as D on D.date = T.order_date 
@@ -161,7 +157,7 @@ where markets_code = 'Mark001' and year = 2020;
 
 
 /*8) Distinct Products sold in Chennai and we want it to be by most sold product to least sold*/
-select P.product_code, M.markets_code, M.markets_name, P.product_type, sum(T.sales_amount) as "Total Sales"
+<br>select P.product_code, M.markets_code, M.markets_name, P.product_type, sum(T.sales_amount) as "Total Sales"
 from sales.transactions as T
 join sales.products as P on P.product_code = T.product_code
 join sales.markets as M on M.markets_code = T.market_code
@@ -171,7 +167,7 @@ order by sum(T.sales_amount) desc;
 
 
 /* 9) Finding our top 5 most Profitable Markets*/
-select  markets_name, sum(sales_amount) as "Total Sales"
+<br>select  markets_name, sum(sales_amount) as "Total Sales"
 from sales.transactions as T
 join sales.markets as M on T.market_code = M.markets_code
 group by T.market_code 
@@ -188,7 +184,7 @@ Ahmedabad	132526737
 
 
 /*10) 5 of The Least Profitable Markets (in INR)*/
-select M.markets_name, sum(T.sales_amount) as "Total Sales"
+<br>select M.markets_name, sum(T.sales_amount) as "Total Sales"
 from sales.transactions as T
 join sales.markets as M on M.markets_code = T.market_code
 group by T.market_code 
