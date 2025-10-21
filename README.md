@@ -40,6 +40,10 @@ Key Challenges:
 
 Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)*
 
+Establishing relations/relationship between the 5 tables within the sales schema (Dataset for AtliQ Hardware) - The Tables are organized in a Star Schema 
+<img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
+
+
 **Approach**
 
 1. **Data Extraction (SQL):**
