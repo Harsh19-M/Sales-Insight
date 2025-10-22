@@ -193,6 +193,7 @@ where markets_code = 'Mark001' and year = 2020;
    3. Nagpur – ₹55,026,321
    4. Kochi – ₹18,813,466
    5. Ahmedabad – ₹13,252,673
+     
 
 10. **Bottom 5 Least Profitable Markets**
 
