@@ -124,8 +124,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   limit 5;
 ```
 
-*Result:*
-
+*Results:*
    * Delhi NCR – ₹520,721,134
    * Mumbai – ₹150,180,636
    * Nagpur – ₹55,026,321
@@ -142,8 +141,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   order by sum(T.sales_amount) asc
   limit 5;
 ```
-*Result:*
-   
+*Results:*
    * Bengaluru	– ₹373,115
    * Bhubaneshwar	– ₹893,857
    * Surat	– ₹2,605,796
