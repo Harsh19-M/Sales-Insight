@@ -65,7 +65,7 @@ I used Basic MySQL queries to analyze sales Transaction Details, Customer segmen
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
 `Products`, `Date`, `Transactions`, `Customers`, and `Markets`.
 
-**Transactions using USD Currency**
+#### **Transactions using USD Currency**
 
 ```
   select*
@@ -75,7 +75,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 *Result:* **transaction details using USD currency**
 
-**AND if we are strictly looking for the count only - as in how many in total (using USD) then we simply do this:**
+**AND if we are looking for the count only - as in how many in total (using USD)**
 
 ```
   select count(*) as "Total Number of Transactions using USD currency"
@@ -86,7 +86,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *Result:* **2 transactions in USD**
 
 
-**We want to know total Revenue Generated only in the year 2020 then 2018, 2019 - Overview**
+#### **We want to know Total Revenue Generated only in the year 2020 then 2018, 2019 - Overview**
    
   ```
   select sum(T.sales_amount) as "Total Revenue in 2020"
@@ -115,7 +115,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *(Revenue trend shows decline year-over-year.)*
    
 
-**Top 5 Most Profitable Markets**
+#### **Top 5 Most Profitable Markets**
 ```
   select  markets_name, sum(sales_amount) as "Total Sales"
   from sales.transactions as T
@@ -134,7 +134,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
    * Ahmedabad – ₹13,252,673
      
 
-**Bottom 5 Least Profitable Markets**
+#### **Bottom 5 Least Profitable Markets**
 ```
   select M.markets_name, sum(T.sales_amount) as "Total Sales"
   from sales.transactions as T
