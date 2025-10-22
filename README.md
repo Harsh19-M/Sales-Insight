@@ -77,7 +77,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   where currency = "USD";
 ```
 
-*Result:* **transaction details using USD currency**
+*Result:* **Transaction details using USD currency**
 
 **AND Count of How many in total (using USD)**
 
