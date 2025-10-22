@@ -59,7 +59,7 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
 
 I used Basic MySQL queries to analyze sales Transaction Details, Customer segments, Growth rates, and Profitable Markets etc. Below are the key queries — the rest are documented in the attached SQL file.
 
-<details> <summary><b> Key (Insights) SQL Queries - Click to see the Queries</b></summary>
+<details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
 
 
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
@@ -67,9 +67,9 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 **Transactions using USD Currency**
 
-  select*
+  '''select*
   from sales.transactions 
-  where currency = "USD";
+  where currency = "USD";'''
 
 *Result:* **transaction details using USD currency**
 
