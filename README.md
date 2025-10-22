@@ -75,7 +75,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 *Result:* **transaction details using USD currency**
 
-**AND if we are looking for the count only - as in how many in total (using USD)**
+**AND Count of How many in total (using USD)**
 
 ```
   select count(*) as "Total Number of Transactions using USD currency"
@@ -86,30 +86,37 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *Result:* **2 transactions in USD**
 
 
-#### **We want to know Total Revenue Generated only in the year 2020 then 2018, 2019 - Overview**
+#### **Total Revenue (Jan–Jun 2020) vs. Previous Years**
    
   ```
-  select sum(T.sales_amount) as "Total Revenue in 2020"
+  select*, T.sales_amount as "Total Revenue up till June 2020"
   from sales.transactions as T
-  join sales.date as D on D.date = T.order_date
-  where D.year = 2020;
+  inner join sales.date as D on D.date = T.order_date
+  where D.year = 2020 and T.currency = "INR";
 ```
 ```
   select sum(T.sales_amount) as "Total Revenue 2019"
   from sales.transactions as T
-  join sales.date as D on D.date = T.order_date
+  inner join sales.date as D on D.date = T.order_date
   where D.year = 2019 and T.currency = "INR";
 ```
 ```
   select sum(T.sales_amount) as "Total Revenue 2018"
   from sales.transactions as T
-  join sales.date as D on D.date = T.order_date
+  inner join sales.date as D on D.date = T.order_date
   where D.year = 2018 and T.currency = "INR";
 ```
+```
+  select sum(T.sales_amount) as "Total Revenue 2017"
+  from sales.transactions as T
+  inner join sales.date as D on D.date = T.order_date
+  where D.year = 2017 and T.currency = "INR";
+```
    *Results:*
-   * **2020:** ₹142,235,559
-   * **2019:** ₹433,012
-   * **2018:** ₹621,779
+   * **2020:** `₹11,014`
+   * **2019:** `₹433,012`
+   * **2018:** `₹621,779`
+   * **2017:** `₹685,749`
      
    *Insight:* **(Revenue trend shows decline year-over-year.)**
    
@@ -123,13 +130,12 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   order by sum(sales_qty) desc
   limit 5;
 ```
-
 *Results:*
-   * Delhi NCR – ₹520,721,134
-   * Mumbai – ₹150,180,636
-   * Nagpur – ₹55,026,321
-   * Kochi – ₹18,813,466
-   * Ahmedabad – ₹13,252,673
+   * Delhi NCR – `₹520,721,134`
+   * Mumbai – `₹150,180,636`
+   * Nagpur – `₹55,026,321`
+   * Kochi – `₹18,813,466`
+   * Ahmedabad – `₹13,252,673`
      
 
 #### **Bottom 5 Least Profitable Markets**
@@ -142,15 +148,17 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   limit 5;
 ```
 *Results:*
-   * Bengaluru	– ₹373,115
-   * Bhubaneshwar	– ₹893,857
-   * Surat	– ₹2,605,796
-   * Lucknow	– ₹3,094,007
-   * Patna	– ₹4,428,393
+   * Bengaluru	– `₹373,115`
+   * Bhubaneshwar	– `₹893,857`
+   * Surat	– `₹2,605,796`
+   * Lucknow	– `₹3,094,007`
+   * Patna	– `₹4,428,393`
 
 
+These queries were designed to identify sales performance trends, market profitability, and transaction patterns before building the Power BI dashboard
 </details>
 
+---
 
 ### 📊 **Power BI Data Modeling**
 
