@@ -57,7 +57,9 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
 
 ### **SQL Data Exploration (MySQL)** 
 
-I used Basic MySQL queries to analyze sales Transaction Details, Customer segments, Growth rates, and Profitable Markets etc. Below are the some of the key queries — Rest are all documented in the attached SQL file.
+I used Basic MySQL queries to analyze sales Transaction Details, Customer segments, Growth rates, and Profitable Markets etc. Below are some of the key queries — the rest are documented in the attached SQL file.
+
+These queries formed the foundation for modeling and dashboarding later in Power BI, ensuring accurate metrics validation and clean relationships between dimension and fact tables.
 
 <details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
 
@@ -66,6 +68,8 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 `Products`, `Date`, `Transactions`, `Customers`, and `Markets`.
 
 #### **Transactions using USD Currency**
+
+**Performed basic validation queries (e.g., checking for multi-currency transactions) to ensure data consistency before proceeding with sales and market analysis.**
 
 ```
   select*
@@ -154,13 +158,12 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
    * Lucknow	– `₹3,094,007`
    * Patna	– `₹4,428,393`
 
+These SQL queries served as preliminary data exploration steps to validate joins, assess data quality, and gain a basic understanding of key business metrics prior to performing deeper analysis, transformation and visualization in Power BI.
 
-These queries were designed to identify sales performance trends, market profitability, and transaction patterns before building the Power BI dashboard
 </details>
 
----
 
-### 📊 **Power BI Data Modeling**
+### **Power BI Data Modeling**
 
 After generating SQL insights, the dataset was imported into **Power BI** for visualization and relationship modeling.
 
