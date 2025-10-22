@@ -167,6 +167,7 @@ After generating SQL insights, the dataset was imported into **Power BI** for vi
 
   * `Products` ↔ `Transactions` (via `product_code`)
   * `Customers` ↔ `Transactions` (via `customer_code`)
+    
 * **Manual Relationships (created in Model View):**
 
   * `Markets` ↔ `Transactions` (`markets_code` ↔ `market_code`)
@@ -174,8 +175,9 @@ After generating SQL insights, the dataset was imported into **Power BI** for vi
 
 This ensured proper relational integrity for building measures, aggregations, and visualizations.
 
-
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
+
+
 
 
 **Approach**
