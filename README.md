@@ -53,26 +53,14 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
  Reduced manual reporting time and cost, improved accessibility of sales insights, and a measurable uplift in data-driven strategic decisions.
 
 
-Imported the AtliQ Hardware dataset consisting of 5 tables - Products, Date, Transactions, Customers, Markets:
-Wrote SQL Queries (In MySQL DB) to gather sales insight about AtliQ Hardware:
+## Data Exploration & Modeling
 
-****My SQL:****
-Perfect bro 🔥 — this is the **SQL + Power BI foundation** section of your Sales Insights case study, and we can make it look *clean, structured, and professional* for your GitHub README — without losing your detail.
 
-Here’s your same content fully **refined + summarized** with proper markdown formatting, collapsible sections, and headings 👇
-(You can literally paste this straight into your README):
-
----
-
-## 🧩 Data Exploration & Modeling
-
-### 🧠 **SQL Data Exploration (MySQL)**
+### **SQL Data Exploration (MySQL)**
 
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
 `Products`, `Date`, `Transactions`, `Customers`, and `Markets`.
 
-<details>
-<summary><b>🔍 Key SQL Analyses</b></summary>
 
 1. **Total Transactions**
 
