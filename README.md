@@ -197,6 +197,9 @@ Through running basic SQL query we found out that the transactions table has way
 
 Now we'll finally change the USD (or other currencies) like convert them to INR.
 
+<img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
+
+
 = Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
 
 So we simply tweaked the formula - didn't write from scratch - just tweaked
