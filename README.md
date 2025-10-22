@@ -183,6 +183,7 @@ After generating SQL insights, the dataset was imported into **Power BI** for vi
 
 This ensured proper relational integrity for building measures, aggregations, and visualizations.
 
+**Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
 
