@@ -56,45 +56,16 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
 ## Data Exploration & Modeling
 
 
-### **SQL Data Exploration (MySQL)** 
-<details> <summary><b> Key (Insights) SQL Queries - Click to see all Queries</b></summary>
+### **SQL Data Exploration (MySQL) ** 
+- I used basics of SQL queries to analyze sales trends, growth rates, and customer segments. Below are the key queries — the rest are documented in the attached SQL file.
+
+<details> <summary><b> Key (Insights) SQL Queries - Click to see the Queries</b></summary>
 
 
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
 `Products`, `Date`, `Transactions`, `Customers`, and `Markets`.
 
-
-1. **Total Transactions**
-
-   select count(sales_qty) as "Total Transactions" 
-   from sales.transactions;
-   
-
-*Result:* **150,283 total transactions**
-
-2. **Total Customers**
-
-  select count(customer_code) as "Number of Total Records (Customers)"
-  from sales.customers;
-
-*Result:* **38 customers**
-
-3. **Transactions in Chennai**
-
-  select*
-  from sales.transactions
-  where market_code = "Mark001";
-   
-*Result:* Transactions filtered for **Chennai (Mark001)**
-
-**Also Total Number of Transactions in Chennai**
-
-  select count(*) as "Total # of Transactions in Chennai"
-  from sales.transactions
-  where market_code = 'Mark001';
-
-
-4. **Transactions using USD Currency**
+**Transactions using USD Currency**
 
   select*
   from sales.transactions 
@@ -111,24 +82,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *Result:* **2 transactions in USD**
 
 
-5. **Show All Transactions only in 2020 joined with the date table**
-
-  select*
-  from sales.transactions as T
-  inner join sales.date as D on D.date = T.order_date
-  where D.year = 2020;
-
-**AND if we only want a count of how many total transactions took place only in the year 2020**
-
-  select count(*) as "Total Transactions in Year 2020"
-  from sales.transactions as T 
-  inner join sales.date as D on D.date = T.order_date
-  where D.year = 2020;
-
-*Result:* **21550 transactions took place in the year of 2020**
-
-
-6. **We want to know total Revenue Generated only in the year 2020**
+**We want to know total Revenue Generated only in the year 2020 then 2018, 2019 - Overview**
    
   select sum(T.sales_amount) as "Total Revenue in 2020"
   from sales.transactions as T
@@ -154,30 +108,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *(Revenue trend shows decline year-over-year.)*
    
 
-7. **We want to know the Total Revenue Generated only from/in Chennai in the year 2020**
-
-  select sum(T.sales_amount) as "Total Revenue - Chennai (2020)"
-  from sales.transactions as T
-  join sales.markets as M on M.markets_code = T.market_code
-  join sales.date as D on D.date = T.order_date 
-  where markets_code = 'Mark001' and year = 2020;
-
-*Results:*
- **Total Revenue - Chennai (2020):** ₹2,463,024
-
-
-8. **Distinct Products sold in Chennai and we want it to be by most sold product to least sold**
-    
-  select P.product_code, M.markets_code, M.markets_name, P.product_type, sum(T.sales_amount) as "Total Sales"
-  from sales.transactions as T
-  join sales.products as P on P.product_code = T.product_code
-  join sales.markets as M on M.markets_code = T.market_code
-  where M.markets_code = "Mark001" 
-  group by P.product_code, P.product_type, M.markets_code
-  order by sum(T.sales_amount) desc;
-
-
-9. **Top 5 Most Profitable Markets**
+**Top 5 Most Profitable Markets**
 
   select  markets_name, sum(sales_amount) as "Total Sales"
   from sales.transactions as T
@@ -195,7 +126,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
    * Ahmedabad – ₹13,252,673
      
 
-10. **Bottom 5 Least Profitable Markets**
+**Bottom 5 Least Profitable Markets**
 
   select M.markets_name, sum(T.sales_amount) as "Total Sales"
   from sales.transactions as T
