@@ -57,7 +57,7 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
 
 
 ### **SQL Data Exploration (MySQL)** 
-<details> <summary><b> Key SQL Analyses - Click to see all Exploratory Queries</b></summary>
+<details> <summary><b> Key (Insights) SQL Queries - Click to see all Queries</b></summary>
 
 
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
