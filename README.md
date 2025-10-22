@@ -55,9 +55,9 @@ Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)
 
 ## Data Exploration & Modeling
 
+### **SQL Data Exploration (MySQL)** 
 
-### **SQL Data Exploration (MySQL) ** 
-- I used basics of SQL queries to analyze sales trends, growth rates, and customer segments. Below are the key queries — the rest are documented in the attached SQL file.
+I used basics of SQL queries to analyze sales trends, growth rates, and customer segments. Below are the key queries — the rest are documented in the attached SQL file.
 
 <details> <summary><b> Key (Insights) SQL Queries - Click to see the Queries</b></summary>
 
