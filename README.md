@@ -156,11 +156,11 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 7. **We want to know the Total Revenue Generated only from/in Chennai in the year 2020**
 
-select sum(T.sales_amount) as "Total Revenue - Chennai (2020)"
-from sales.transactions as T
-join sales.markets as M on M.markets_code = T.market_code
-join sales.date as D on D.date = T.order_date 
-where markets_code = 'Mark001' and year = 2020;
+  select sum(T.sales_amount) as "Total Revenue - Chennai (2020)"
+  from sales.transactions as T
+  join sales.markets as M on M.markets_code = T.market_code
+  join sales.date as D on D.date = T.order_date 
+  where markets_code = 'Mark001' and year = 2020;
 
 *Results:*
  **Total Revenue - Chennai (2020):** ₹2,463,024
@@ -197,12 +197,12 @@ where markets_code = 'Mark001' and year = 2020;
 
 10. **Bottom 5 Least Profitable Markets**
 
-    select M.markets_name, sum(T.sales_amount) as "Total Sales"
-    from sales.transactions as T
-    join sales.markets as M on M.markets_code = T.market_code
-    group by T.market_code 
-    order by sum(T.sales_amount) asc
-    limit 5;
+  select M.markets_name, sum(T.sales_amount) as "Total Sales"
+  from sales.transactions as T
+  join sales.markets as M on M.markets_code = T.market_code
+  group by T.market_code 
+  order by sum(T.sales_amount) asc
+  limit 5;
 
 *Result:*
    
