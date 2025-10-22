@@ -67,38 +67,45 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 **Transactions using USD Currency**
 
-  ```select*
+```
+  select*
   from sales.transactions 
-  where currency = "USD";```
+  where currency = "USD";
+```
 
 *Result:* **transaction details using USD currency**
 
 **AND if we are strictly looking for the count only - as in how many in total (using USD) then we simply do this:**
 
-  ```select count(*) as "Total Number of Transactions using USD currency"
+```
+  select count(*) as "Total Number of Transactions using USD currency"
   from sales.transactions
-  where currency = "USD";```
+  where currency = "USD";
+```
 
 *Result:* **2 transactions in USD**
 
 
 **We want to know total Revenue Generated only in the year 2020 then 2018, 2019 - Overview**
    
-  ```select sum(T.sales_amount) as "Total Revenue in 2020"
+  ```
+  select sum(T.sales_amount) as "Total Revenue in 2020"
   from sales.transactions as T
   join sales.date as D on D.date = T.order_date
-  where D.year = 2020;```
-
-  ```select sum(T.sales_amount) as "Total Revenue 2019"
+  where D.year = 2020;
+```
+```
+  select sum(T.sales_amount) as "Total Revenue 2019"
   from sales.transactions as T
   join sales.date as D on D.date = T.order_date
-  where D.year = 2019 and T.currency = "INR";```
-
-  ```select sum(T.sales_amount) as "Total Revenue 2018"
+  where D.year = 2019 and T.currency = "INR";
+```
+```
+  select sum(T.sales_amount) as "Total Revenue 2018"
   from sales.transactions as T
   join sales.date as D on D.date = T.order_date
-  where D.year = 2018 and T.currency = "INR";```
-
+  where D.year = 2018 and T.currency = "INR";
+```
    *Results:*
 
    * **2020:** ₹142,235,559
@@ -109,13 +116,14 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
    
 
 **Top 5 Most Profitable Markets**
-
-  ```select  markets_name, sum(sales_amount) as "Total Sales"
+```
+  select  markets_name, sum(sales_amount) as "Total Sales"
   from sales.transactions as T
   join sales.markets as M on T.market_code = M.markets_code
   group by T.market_code 
   order by sum(sales_qty) desc
-  limit 5;```
+  limit 5;
+```
 
 *Result:*
 
@@ -127,14 +135,14 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
      
 
 **Bottom 5 Least Profitable Markets**
-
-  ```select M.markets_name, sum(T.sales_amount) as "Total Sales"
+```
+  select M.markets_name, sum(T.sales_amount) as "Total Sales"
   from sales.transactions as T
   join sales.markets as M on M.markets_code = T.market_code
   group by T.market_code 
   order by sum(T.sales_amount) asc
-  limit 5;```
-
+  limit 5;
+```
 *Result:*
    
    * Bengaluru	– ₹373,115
