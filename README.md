@@ -163,9 +163,7 @@ join sales.date as D on D.date = T.order_date
 where markets_code = 'Mark001' and year = 2020;
 
 *Results:*
-
-   * **Total Revenue - Chennai (2020):** ₹2,463,024
-
+ **Total Revenue - Chennai (2020):** ₹2,463,024
 
 
 8. **Distinct Products sold in Chennai and we want it to be by most sold product to least sold**
