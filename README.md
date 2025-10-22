@@ -188,7 +188,7 @@ where markets_code = 'Mark001' and year = 2020;
   order by sum(sales_qty) desc
   limit 5;
 
-   ➤ *Result:*
+*Result:*
 
    1. Delhi NCR – ₹520,721,134
    2. Mumbai – ₹150,180,636
@@ -198,20 +198,22 @@ where markets_code = 'Mark001' and year = 2020;
 
 11. **Bottom 5 Least Profitable Markets**
 
-  select M.markets_name, sum(T.sales_amount) as "Total Sales"
-  from sales.transactions as T
-  join sales.markets as M on M.markets_code = T.market_code
-  group by T.market_code 
-  order by sum(T.sales_amount) asc
-  limit 5;
+    select M.markets_name, sum(T.sales_amount) as "Total Sales"
+    from sales.transactions as T
+    join sales.markets as M on M.markets_code = T.market_code
+    group by T.market_code 
+    order by sum(T.sales_amount) asc
+    limit 5;
 
-   ➤ *Result:*
+*Result:*
    
    1. Bengaluru	– ₹373,115
-   2. 2. Bhubaneshwar	– ₹893,857
+   2. Bhubaneshwar	– ₹893,857
    3. Surat	– ₹2,605,796
    4. Lucknow	– ₹3,094,007
    5. Patna	– ₹4,428,393
+
+</details>
 
 
 ### 📊 **Power BI Data Modeling**
