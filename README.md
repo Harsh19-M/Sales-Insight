@@ -107,12 +107,11 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   where D.year = 2018 and T.currency = "INR";
 ```
    *Results:*
-
    * **2020:** ₹142,235,559
    * **2019:** ₹433,012
    * **2018:** ₹621,779
-
-*(Revenue trend shows decline year-over-year.)*
+     
+   *Insight:* **(Revenue trend shows decline year-over-year.)**
    
 
 #### **Top 5 Most Profitable Markets**
