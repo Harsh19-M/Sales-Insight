@@ -79,7 +79,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 *Result:* **38 customers**
 
-4. **Transactions in Chennai**
+3. **Transactions in Chennai**
 
   select*
   from sales.transactions
@@ -94,7 +94,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   where market_code = 'Mark001';
 
 
-5. **Transactions using USD Currency**
+4. **Transactions using USD Currency**
 
   select*
   from sales.transactions 
@@ -111,7 +111,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *Result:* **2 transactions in USD**
 
 
-6. **Show All Transactions only in 2020 joined with the date table**
+5. **Show All Transactions only in 2020 joined with the date table**
 
   select*
   from sales.transactions as T
@@ -128,7 +128,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *Result:* **21550 transactions took place in the year of 2020**
 
 
-7. **We want to know total Revenue Generated only in the year 2020**
+6. **We want to know total Revenue Generated only in the year 2020**
    
   select sum(T.sales_amount) as "Total Revenue in 2020"
   from sales.transactions as T
@@ -154,7 +154,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 *(Revenue trend shows decline year-over-year.)*
    
 
-8. **We want to know the Total Revenue Generated only from/in Chennai in the year 2020**
+7. **We want to know the Total Revenue Generated only from/in Chennai in the year 2020**
 
 select sum(T.sales_amount) as "Total Revenue - Chennai (2020)"
 from sales.transactions as T
@@ -168,7 +168,7 @@ where markets_code = 'Mark001' and year = 2020;
 
 
 
-9. **Distinct Products sold in Chennai and we want it to be by most sold product to least sold**
+8. **Distinct Products sold in Chennai and we want it to be by most sold product to least sold**
     
   select P.product_code, M.markets_code, M.markets_name, P.product_type, sum(T.sales_amount) as "Total Sales"
   from sales.transactions as T
@@ -179,7 +179,7 @@ where markets_code = 'Mark001' and year = 2020;
   order by sum(T.sales_amount) desc;
 
 
-10. **Top 5 Most Profitable Markets**
+9. **Top 5 Most Profitable Markets**
 
   select  markets_name, sum(sales_amount) as "Total Sales"
   from sales.transactions as T
@@ -196,7 +196,7 @@ where markets_code = 'Mark001' and year = 2020;
    4. Kochi – ₹18,813,466
    5. Ahmedabad – ₹13,252,673
 
-11. **Bottom 5 Least Profitable Markets**
+10. **Bottom 5 Least Profitable Markets**
 
     select M.markets_name, sum(T.sales_amount) as "Total Sales"
     from sales.transactions as T
