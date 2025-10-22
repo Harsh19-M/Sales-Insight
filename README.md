@@ -213,6 +213,7 @@ where markets_code = 'Mark001' and year = 2020;
    4. Lucknow	– ₹3,094,007
    5. Patna	– ₹4,428,393
 
+
 </details>
 
 
