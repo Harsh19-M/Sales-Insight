@@ -186,7 +186,26 @@ This ensured proper relational integrity for building measures, aggregations, an
 **Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
+Removing values from the markets table that have missing values - where we can see zone has no "" values in it - nothing there.
+I noticed that New York and Paris had no zone values - plus from what we know AtliQ Hardware runs business only in India - so we can remove these 2.
 
+
+
+We cannot have sales amount < = 0 (less than zero is not possible and equal to zero serves no purpose for our analysis). So we can remove those values.
+Through running basic SQL query we found out that the transactions table has way too many Values where the sales amount is 1 or more but the sales amount is 0. Which makes no sense and servers no purpose in our analysis so we must remove them. 
+
+
+Now we'll finally change the USD (or other currencies) like convert them to INR.
+
+= Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
+
+So we simply tweaked the formula - didn't write from scratch - just tweaked
+
+Before (Only 2 changed - but total of 4 exist)
+<img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/58e497bf-52d6-42c5-940f-7c51c6508576" />
+
+After (all 4 total have changed)
+<img width="956" height="473" alt="image" src="https://github.com/user-attachments/assets/ede9c2a7-0727-4d97-a978-05a834faac87" />
 
 
 **Approach**
