@@ -188,11 +188,11 @@ where markets_code = 'Mark001' and year = 2020;
 
 *Result:*
 
-   1. Delhi NCR – ₹520,721,134
-   2. Mumbai – ₹150,180,636
-   3. Nagpur – ₹55,026,321
-   4. Kochi – ₹18,813,466
-   5. Ahmedabad – ₹13,252,673
+   * Delhi NCR – ₹520,721,134
+   * Mumbai – ₹150,180,636
+   * Nagpur – ₹55,026,321
+   * Kochi – ₹18,813,466
+   * Ahmedabad – ₹13,252,673
      
 
 10. **Bottom 5 Least Profitable Markets**
@@ -206,11 +206,11 @@ where markets_code = 'Mark001' and year = 2020;
 
 *Result:*
    
-   1. Bengaluru	– ₹373,115
-   2. Bhubaneshwar	– ₹893,857
-   3. Surat	– ₹2,605,796
-   4. Lucknow	– ₹3,094,007
-   5. Patna	– ₹4,428,393
+   * Bengaluru	– ₹373,115
+   * Bhubaneshwar	– ₹893,857
+   * Surat	– ₹2,605,796
+   * Lucknow	– ₹3,094,007
+   * Patna	– ₹4,428,393
 
 
 </details>
