@@ -125,7 +125,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
   inner join sales.date as D on D.date = T.order_date
   where D.year = 2020;
 
-*Result:* **21550 transactions took place in the year of 2020**/
+*Result:* **21550 transactions took place in the year of 2020**
 
 
 7. **We want to know total Revenue Generated only in the year 2020**
