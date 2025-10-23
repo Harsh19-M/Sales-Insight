@@ -186,7 +186,9 @@ This ensured proper relational integrity for building measures, aggregations, an
 **Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
-Further Querying revelead:
+<br>
+
+**Further Querying revelead:**
 <img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
 
 
