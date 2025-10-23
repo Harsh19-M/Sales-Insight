@@ -189,7 +189,8 @@ This ensured proper relational integrity for building measures, aggregations, an
 <br>
 
 **Further Querying revelead:**
-<img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
+
+<br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
 
 
 So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI 
