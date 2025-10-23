@@ -193,11 +193,12 @@ This ensured proper relational integrity for building measures, aggregations, an
 <br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
 
 
-So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI 
-**INR\r and USD\r currency values in SQL correspond to (are the same as) = [currency] = "INR#(cr)" and [currency] = "USD#(cr)" in Power BI**
+So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI <br>
+**INR\r and USD\r in SQL = "INR#(cr)" and "USD#(cr)" in Power BI**
 
 - INR\r and USD\r are the ones we will keep and not INR and USD
 - That there were Duplicate Records - 4 of USD
+  
 <br>
 
 **Final Currency values being used:** <br>
