@@ -199,13 +199,13 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 - INR\r and USD\r are the ones we will keep and not INR and USD
 - That there were Duplicate Records - 4 of USD
 
-**So the Final Formula being used - and eventually being used in the dashboard as well would be:** <br>
+**The Final currency values being used in the formula - and eventually being used in the dashboard as well is this:** <br>
 `
 = Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
 `
-
+**The Normalized values for the USD currency transactions would be this:**
 `
-= Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
+= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*87.70 else[sales_amount])
 `
 <br>**IMPORTANT: We simply tweaked the formula - didn't write from scratch - just tweaked**
 
