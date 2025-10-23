@@ -215,6 +215,8 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 = Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
 `
 <br>
+<br>
+
 **It was a conscious choice to keep the currency conversion rate (sales_amount*75.63) not changing according to currency rate of 2017, 2018, and 2019.**
 <br>
 
