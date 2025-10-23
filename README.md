@@ -203,8 +203,8 @@ So it would be beneficial/logical to keep both INR\r and USD\r currency values i
 INR\r and USD\r currency values in SQL correspond to (are the same as) = [currency] = "INR#(cr)" and [currency] = "USD#(cr)" in Power BI
 
 
-So the Final Formula being used - and eventually being used in the dashboard as well would be: 
-= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+**So the Final Formula being used - and eventually being used in the dashboard as well would be:** <br>
+`= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))`
 
 
 = Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
