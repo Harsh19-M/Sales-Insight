@@ -207,7 +207,7 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 <br>
 
 
-**The Normalized values for the USD currency transactions would be this:**
+**The Normalized values for the USD currency transactions would be this:** <br>
 `
 = Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*87.70 else[sales_amount])
 `
