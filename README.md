@@ -199,6 +199,13 @@ Now we'll finally change the USD (or other currencies) like convert them to INR.
 
 <img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
 
+So it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI 
+INR\r and USD\r currency values in SQL correspond to (are the same as) = [currency] = "INR#(cr)" and [currency] = "USD#(cr)" in Power BI
+
+
+So the Final Formula being used - and eventually being used in the dashboard as well would be: 
+= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+
 
 = Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
 
