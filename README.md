@@ -186,22 +186,15 @@ This ensured proper relational integrity for building measures, aggregations, an
 **Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
-Removing values from the markets table that have missing values - where we can see zone has no "" values in it - nothing there.
-I noticed that New York and Paris had no zone values - plus from what we know AtliQ Hardware runs business only in India - so we can remove these 2.
-
-
-
-We cannot have sales amount < = 0 (less than zero is not possible and equal to zero serves no purpose for our analysis). So we can remove those values.
-Through running basic SQL query we found out that the transactions table has way too many Values where the sales amount is 1 or more but the sales amount is 0. Which makes no sense and servers no purpose in our analysis so we must remove them. 
-
-
-Now we'll finally change the USD (or other currencies) like convert them to INR.
-
+Further Querying revelead:
 <img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
+
 
 So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI 
 **INR\r and USD\r currency values in SQL correspond to (are the same as) = [currency] = "INR#(cr)" and [currency] = "USD#(cr)" in Power BI**
 
+- INR\r and USD\r are the ones we will keep and not INR and USD
+- That there were Duplicate Records - 4 of USD
 
 **So the Final Formula being used - and eventually being used in the dashboard as well would be:** <br>
 `
@@ -211,7 +204,7 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 `
 = Table.AddColumn(#"Filtered Rows", "Norm_sales_amount", each if [currency] = "USD" then [sales_amount]*87.70 else[sales_amount])
 `
-So we simply tweaked the formula - didn't write from scratch - just tweaked
+<br>**IMPORTANT: We simply tweaked the formula - didn't write from scratch - just tweaked**
 
 Before (Only 2 changed - but total of 4 exist)
 <img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/58e497bf-52d6-42c5-940f-7c51c6508576" />
