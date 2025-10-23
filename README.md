@@ -228,6 +228,14 @@ After (all 4 total have changed)
 <img width="956" height="473" alt="image" src="https://github.com/user-attachments/assets/ede9c2a7-0727-4d97-a978-05a834faac87" />
 
 
+Before (Only 2 changed - but total of 4 exist)
+<img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/58e497bf-52d6-42c5-940f-7c51c6508576" />
+
+After (all 4 total have changed)
+<img width="956" height="473" alt="image" src="https://github.com/user-attachments/assets/ede9c2a7-0727-4d97-a978-05a834faac87" />
+
+
+
 **Approach**
 
 1. **Data Extraction (SQL):**
