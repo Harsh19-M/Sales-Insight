@@ -194,10 +194,11 @@ This ensured proper relational integrity for building measures, aggregations, an
 
 
 So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI <br>
-**INR\r and USD\r in SQL = "INR#(cr)" and "USD#(cr)" in Power BI**
+**NOTE: "INR\r" and "USD\r" in SQL Queries are same as"INR#(cr)" and "USD#(cr)" in Power BI formulas**
 
-- INR\r and USD\r are the ones we will keep and not INR and USD
-- That there were Duplicate Records - 4 of USD
+- There were Duplicate Records - 1 and 1 duplicate of 2 other transactions in USD - so we must filter thoses ones out.
+- INR\r and USD\r | INR#(cr)" and "USD#(cr) - are the ones we will keep and not INR and USD 
+- "INR#(cr)" and "USD#(cr)" in Power BI are the ones I'll keep in Power BI and cleanup the others.
   
 <br>
 
@@ -209,13 +210,14 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 
 <br>
 
-**The Normalized values for the USD currency to INR would be:** <br>
+**The Normalized values for the USD currency to INR (as of 2020 - last updated) would be:** <br>
 `
-= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*87.70 else[sales_amount])
+= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
 `
-
 <br>
-**IMPORTANT: We simply tweaked the formula - didn't write from scratch - just tweaked**
+**It was a conscious choice to keep the currency conversion rate (sales_amount*75.63) not changing according to currency rate of 2017, 2018, and 2019.**
+<br>
+
 
 Before (Only 2 changed - but total of 4 exist)
 <img width="959" height="443" alt="image" src="https://github.com/user-attachments/assets/58e497bf-52d6-42c5-940f-7c51c6508576" />
