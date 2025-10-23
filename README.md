@@ -199,6 +199,7 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 - There were Duplicate Records - 1 and 1 duplicate of 2 other transactions in USD - so we must filter thoses ones out.
 - INR\r and USD\r | INR#(cr)" and "USD#(cr) - are the ones we will keep and not INR and USD 
 - "INR#(cr)" and "USD#(cr)" in Power BI are the ones I'll keep in Power BI and cleanup the others.
+- Removing/Cleaning out those sales_amount values that are less than equal to 0. Not replacing them wiht the mean value. Simply removing them.
   
 <br>
 
