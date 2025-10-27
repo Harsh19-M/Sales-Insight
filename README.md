@@ -167,7 +167,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 After generating SQL insights, the dataset was imported into **Power BI** for visualization and relationship modeling. <br>
 
-The Power BI Report contains 3 structured pages — **Executive Summary**, **Profit Analysis**, and **Performance Insights** — designed to simulate a real-world business reporting scenario.
+The Power BI Report contains 3 structured pages — **1. Executive Summary**, **2. Profit Analysis**, and **3. Performance Insights** — designed to simulate a real-world business reporting scenario.
 
 **Steps Taken:**
 
