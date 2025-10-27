@@ -223,7 +223,7 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 <br>
 
 
-
+<br>
 **Approach**
 
 1. **Data Extraction (SQL):**
