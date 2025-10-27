@@ -221,9 +221,8 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 
 **It was a conscious choice to keep the currency conversion rate (sales_amount*75.63) not changing according to currency rate of 2017, 2018, and 2019.**
 <br>
-
-
 <br>
+
 **Approach**
 
 1. **Data Extraction (SQL):**
