@@ -165,7 +165,9 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ### **Power BI Data Modeling**
 
-After generating SQL insights, the dataset was imported into **Power BI** for visualization and relationship modeling.
+After generating SQL insights, the dataset was imported into **Power BI** for visualization and relationship modeling. <br>
+
+**The Power BI report contains 3 structured pages — Executive Summary, Profit Analysis, and Performance Insights — designed to simulate a real-world business reporting scenario.**
 
 **Steps Taken:**
 
