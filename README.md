@@ -15,9 +15,9 @@ This dashboard uncovers hidden insights behind **declining company sales despite
 
 ---
 
-🚀 **Live Dashboard:** [View Power BI Report](your-link-here)  
-📊 **Executive Presentation Deck:** [View Google Slides](your-link-here)  
-📁 **Full Case Study Below ↓**
+**Live Dashboard:** [View Power BI Report](your-link-here)  
+**Executive Presentation Deck:** [View Google Slides](your-link-here)  
+**Full Case Study Below ↓**
 
 
 
@@ -255,7 +255,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-## 🔗 Deliverables
+## Deliverables
 - **Executive Deck:** [View Slides](your-slides-link-here)  
 - **GitHub README:** [Detailed Project Story](your-readme-link-here)  
 - **Interactive Dashboard:** [View Dashboard](your-powerbi-link-here)
