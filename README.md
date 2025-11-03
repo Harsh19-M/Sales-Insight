@@ -212,7 +212,7 @@ So here I noticed that there were 2 duplicate records of the same transactions "
 
 3. **Visualization (Power BI):**  
    - Built a 3-page interactive dashboard:  
-     - **Executive Summary**  
+     - **Key Insights**  
      - **Profit Analysis**  
      - **Performance Insights**
 
