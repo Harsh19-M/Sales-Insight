@@ -176,6 +176,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
    - Standardized all figures to **INR** using a fixed 2020 rate (USD × 75.63).
    
 <details> <summary><b>Key Power BI DAX-Expressions (Click to Expand)</b></summary>
+   
 **Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
