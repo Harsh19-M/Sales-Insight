@@ -1,10 +1,10 @@
 # AtliQ Hardware Sales Insights Project
 
-A **data-driven business intelligence project** analyzing AtliQ Hardware’s multi-year sales performance using **MySQL + Power BI**.  
+A **Data-Driven Business Intelligence Project** analyzing AtliQ Hardware’s multi-year sales performance using **MySQL + Power BI**.  
 This dashboard uncovers hidden insights behind **declining company sales despite apparent market growth**, helping leadership identify high-ROI markets and fix reporting inefficiencies.
 
 ## Key Highlights
-- Built an **interactive Power BI dashboard** powered by cleaned and transformed SQL data.  
+- Built an **Interactive Power BI Dashboard** powered by cleaned and transformed SQL data.  
 - **Disproved false growth assumption** — sales dropped YoY (2017–2020) despite expanding markets.  
 - Normalized multi-currency transactions (USD → INR), removed duplicates, and validated data integrity.  
 - Identified **Delhi NCR & Mumbai** as top-grossing but **Lucknow & Surat** as most efficient markets.  
