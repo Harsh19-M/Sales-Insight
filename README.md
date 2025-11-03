@@ -221,7 +221,7 @@ So here I noticed that there were 2 duplicate records of the same transactions "
 ## Key Insights
 - **Revenue Decline Identified:** Despite new markets, yearly sales fell from 2017 → 2020.  
 - **Top Markets:** Delhi NCR and Mumbai contributed ~70 % of revenue.  
-- **Efficient Markets:** Lucknow, Surat and Bhubaneshwar showed strong ROI despite low absolute sales.  
+- **Efficient Markets:** Lucknow, Surat and Bhubaneshwar were among the top most in terms of profit efficiency (Profit %), despite not being at the top in terms of Revenue.
 - **Currency Standardization:** Unified USD and INR data improved report accuracy.  
 - **Duplicate Records Removed:** Eliminated false spikes and inaccurate sales entries.  
 
