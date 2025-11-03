@@ -30,7 +30,7 @@ Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Frag
 reliable business insights.
 
 
-Key Challenges:
+**Key Challenges:**
 1. Lack of Data-Backed Insights: No single source of truth for performance by region, customer, or product category.
 2. Inefficient Reporting: Manual Excel reports and verbal updates delay decision-making.
 3. Sales Decline Despite Market Growth: Missed opportunities due to poor visibility and unstructured data.
