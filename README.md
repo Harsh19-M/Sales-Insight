@@ -16,7 +16,7 @@ This dashboard uncovers hidden insights behind **declining company sales despite
 ---
 
 🚀 **Live Dashboard:** [View Power BI Report](your-link-here)  
-📊 **Presentation Deck:** [View Google Slides](your-link-here)  
+📊 **Executive Presentation Deck:** [View Google Slides](your-link-here)  
 📁 **Full Case Study Below ↓**
 
 # Sales Insights Case Study – AtliQ Hardware 
