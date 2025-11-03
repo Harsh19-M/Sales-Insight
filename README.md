@@ -19,71 +19,49 @@ This dashboard uncovers hidden insights behind **declining company sales despite
 📊 **Executive Presentation Deck:** [View Google Slides](your-link-here)  
 📁 **Full Case Study Below ↓**
 
-# Sales Insights Case Study – AtliQ Hardware 
-**A Data-Driven Sales Performance Dashboard built using SQL and Power BI**
-
-## Executive Summary:
-
-**Company**: AtliQ Hardware <br>
-**Industry**: Computer Hardware & Peripherals<br>
-**Head Office**: Delhi, India<br>
-**Key Stakeholder**: Bhavin Patel, Sales Director<br>
-
-Using SQL and Power BI, this project builds an interactive sales dashboard for AtliQ Hardware — a computer hardware manufacturer facing fragmented, unreliable sales reports. The dashboard consolidates sales data from multiple sources to help the Sales Director, Bhavin Patel, easily track key KPIs, identify performance trends, and make faster, 
-data-driven decisions.
-
-Key Outcomes:
-
-* Centralized, accurate view of company-wide sales performance
-* Automated reporting with real-time insights
-* Improved sales visibility and data-driven decision-making
 
 
-## Business Problem:
 
-Context:
-AtliQ Hardware supplies computer components and peripherals to major retail clients across India. As the market expands rapidly, the company struggles to track and analyze 
-sales performance effectively across its regional divisions (North, South, and Central India).
+# 🧩 AtliQ Hardware Sales Insights Case Study
+**A Data-Driven Sales Performance Dashboard built using SQL (exploration) and Power BI (cleaning, modeling & visualization)**  
 
-Problem Statement:
-Bhavin Patel lacks centralized visibility into AtliQ’s sales performance. Fragmented Excel files and inconsistent manual reporting from regional managers prevent timely and 
-reliable business insights.
+---
 
+## 🏢 Business Context
+AtliQ Hardware is a computer hardware manufacturer that supplies peripherals across India.  
+As the company expanded into new markets, its management team — led by **Bhavin Patel (Sales Director)** — began noticing mismatched sales trends across regions.  
+Despite apparent *market growth*, **total revenue kept declining each year**.  
+This project aimed to identify the root causes behind those inconsistencies and build a unified reporting system for real-time insights.
 
-**Key Challenges:**
-1. Lack of Data-Backed Insights: No single source of truth for performance by region, customer, or product category.
-2. Inefficient Reporting: Manual Excel reports and verbal updates delay decision-making.
-3. Sales Decline Despite Market Growth: Missed opportunities due to poor visibility and unstructured data.
+---
 
+## 🎯 Business Problem
+AtliQ’s existing manual Excel reports led to inconsistent and delayed insights, making strategic decision-making difficult.  
+Key issues included:
+- Fragmented sales data scattered across regions.  
+- Poor visibility of top- and low-performing markets.  
+- A false perception of *“growth”* — markets expanded but actual sales were dropping.
 
-## Methodology:
+---
 
-Framework Used: AIMS Grid *(Assumptions | Information | Methodology | Solutions)*
+## ⚙️ Key Challenges
+1. **Data Fragmentation:** No centralized data source or reliable reporting structure.  
+2. **Data Quality Issues:** Duplicates, invalid transactions (`sales_amount ≤ 0`), and mixed currencies (USD vs INR).  
+3. **Misinterpreted Market Growth:** Sales expansion mistaken for revenue growth due to unvalidated reporting.  
 
- 1. Purpose:
- Define a structured plan to solve AtliQ’s reporting challenges by creating a unified, data-driven dashboard for real-time sales visibility and faster decision-making.
+---
 
-2. Stakeholders:
- Sales & Marketing Teams, IT Department (Falcons), Data Analytics Team (Data Masters).
+## 🧭 Approach Overview
+**Framework Used:** AIMS Grid – *(Assumptions | Information | Methodology | Solutions)*  
 
-3. End Result:
- A Power BI dashboard directly connected to AtliQ’s SQL sales database, consolidating regional performance data into a single interactive view.
-
-4. Success Criteria:
- Reduced manual reporting time and cost, improved accessibility of sales insights, and a measurable uplift in data-driven strategic decisions.
-
-
-## Data Exploration & Modeling
-
-### **SQL Data Exploration (MySQL)** 
-
-I used Basic MySQL queries to analyze sales Transaction Details, Customer segments, Growth rates, and Profitable Markets etc. Below are some of the key queries — the rest are documented in the attached SQL file.
+1. **Data Exploration (MySQL):**  
+   - Explored 5 datasets (`Transactions`, `Markets`, `Products`, `Customers`, `Date`).  
+   - Identified duplicate transactions and multi-currency inconsistencies.  
+   - Calculated top / bottom 5 markets by total revenue.
 
 These queries formed the foundation for modeling and dashboarding later in Power BI, ensuring accurate metrics validation and clean relationships between dimension and fact tables.
 
 <details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
-
-
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
 `Products`, `Date`, `Transactions`, `Customers`, and `Markets`.
 
@@ -183,9 +161,125 @@ These SQL queries served as preliminary data exploration steps to validate joins
 </details>
 
 
-### **Power BI Data Modeling**
+2. **Data Cleaning & Modeling (Power BI):**
+   - Identified and structured a Star Schema in Power BI by connecting relationships between the Transactions fact table and dimension tables for
+     Markets, Customers, Products, and Date.
+   - Removed duplicates and invalid records. 2 USD/R and 2 USD transactions (duplicated records of same).
+   - Removed all the transactions where sales amount (total amount in INR) was either 0 or less.
+   - Standardized all figures to **INR** using a fixed 2020 rate (USD × 75.63).
+   
+<details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
+**Star Schema:**
+<br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
-After generating SQL insights, the dataset was imported into **Power BI** for visualization and relationship modeling. <br>
+
+<br>
+
+
+**Further Querying revelead:**
+<br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
+
+
+So I concluded that it would be beneficial/logical to keep the "INR#(cr)" and "USD#(cr)"  currency values in our dashboard built in Power BI <br>
+**NOTE: "INR\r" and "USD\r" in SQL Queries are same as"INR#(cr)" and "USD#(cr)" in Power BI formulas**
+
+<br>
+
+**Final Currency values being used:** <br>
+`
+= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+`
+<br>
+
+<br>
+
+**The Normalized values for the USD currency to INR (as of 2020 - last updated) would be:** <br>
+`
+= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
+`
+
+<img width="971" height="58" alt="image" src="https://github.com/user-attachments/assets/997fc9bd-47e7-4236-b2c0-b09c4ea6e373" />
+
+<br>
+<br>
+
+</details>
+
+
+3. **Visualization (Power BI):**  
+   - Built a 3-page interactive dashboard:  
+     - **Executive Summary**  
+     - **Profit Analysis**  
+     - **Performance Insights**
+
+---
+
+## 📊 Key Insights
+- **Revenue Decline Identified:** Despite new markets, yearly sales fell from 2017 → 2020.  
+- **Top Markets:** Delhi NCR and Mumbai contributed ~70 % of revenue.  
+- **Efficient Markets:** Lucknow, Surat and Bhubaneshwar showed strong ROI despite low absolute sales.  
+- **Currency Standardization:** Unified USD and INR data improved report accuracy.  
+- **Duplicate Records Removed:** Eliminated false spikes and inaccurate sales entries.  
+
+---
+
+## 💡 Business Impact
+| **Metric** | **Before** | **After** |
+|-------------|-------------|------------|
+| Data Quality | Inconsistent & duplicated | Cleaned & standardized dataset |
+| Reporting Process | Manual Excel (4–6 hrs/week) | Automated Power BI Dashboard |
+| Sales Visibility | Regional only | Company-wide performance overview |
+| Decision-Making | Reactive | Proactive & data-driven |
+
+---
+
+## 🧠 Tools & Techniques
+| **Category** | **Used For** |
+|---------------|--------------|
+| AIMS Grid | Defining Project Purpose, Stakeholders, End Result, Success Critera|
+| MySQL | Data exploration & validation |
+| Power BI | Data cleaning, modeling & visualization |
+| Power Query + DAX | Data transformation & KPI calculations |
+| Excel | Initial data view / file imports |
+| Data Analysis | Business storytelling & trend diagnosis |
+
+---
+
+## 📈 Key Outcomes
+- Built an **interactive Power BI dashboard** consolidating all sales data.  
+- Reframed company’s “growth narrative” — sales were declining despite market expansion.  
+- Delivered real-time visibility into KPIs and profit trends across markets.  
+- Enabled management to allocate resources based on profit efficiency instead of sales volume.  
+- Automated reporting process, saving 4–6 hours per week.  
+
+---
+
+## 🔗 Deliverables
+- 📊 **Executive Deck:** [View Slides](your-slides-link-here)  
+- 🧾 **GitHub README:** [Detailed Project Story](your-readme-link-here)  
+- 💻 **Interactive Dashboard:** [View Dashboard](your-powerbi-link-here)
+
+---
+
+## 🚀 Future Enhancements
+- Add advanced SQL for profit ratio and market efficiency analysis.  
+- Automate data refresh pipeline from MySQL → Power BI.  
+- Expand KPIs to include customer retention and product-level profitability.  
+- Integrate forecasting models for sales prediction.  
+
+---
+
+👨‍💻 *Developed by Harsh Mishra*  
+📬 *Open for Data Analyst / BI opportunities*  
+
+
+
+
+
+
+
+
+
 
 The Power BI Report contains 3 structured pages — **1. Executive Summary**, **2. Profit Analysis**, and **3. Performance Insights** — designed to simulate a real-world business reporting scenario.
 
@@ -240,57 +334,3 @@ So I concluded that it would be beneficial/logical to keep both INR\r and USD\r 
 <br>
 <br>
 
-**It was a conscious choice to keep the currency conversion rate (sales_amount*75.63) not changing according to currency rate of 2017, 2018, and 2019.**
-<br>
-<br>
-
-**Approach**
-
-1. **Data Extraction (SQL):**
-   - Collected and merged multiple Excel datasets.
-   - Used SQL queries to clean, aggregate, and transform raw data.
-
-2. **Data Modeling (Power BI):**
-   - Established relationships between sales, customers, and products tables.
-   - Created calculated columns and measures for KPIs.
-   
-3. **Visualization:**
-   - Built an interactive Power BI dashboard for dynamic exploration and insights.
-
-**Data Flow:**
-Raw Excel Files ➜ SQL Cleaning & Joins ➜ Clean Dataset ➜ Power BI Dashboard
-
-
-## Skills:
-
-* SQL: Joins, aggregate functions, CASE statements, window functions (if applicable)
-* Power BI: DAX, data modeling, measures, calculated columns, and dynamic dashboards 
-* Data Analysis: Cleaning, transformation, KPI design, trend analysis, storytelling
-
-
-## Results & Business Recommendations:
-
-*(Placeholder – to be filled once analysis & dashboard visuals are finalized)*
-
-**Results:**
- 
-* Identified top-performing regions and customers
-* Highlighted areas of revenue decline and underperforming products
-* Delivered clear insights for strategic decision-making
-
-**Recommendations:**
-
-* Focus marketing and promotions on weak regions
-* Re-evaluate low-performing products
-* Automate monthly sales reports for consistent updates
-
-(Insert visuals or screenshots from Power BI dashboard here once ready)
-
-
-## Next Steps:
-
-- Integrate additional KPIs (e.g., profit margins, customer retention)
-- Automate data refreshes using SQL and Power BI scheduling
-- Address data limitations and ensure completeness
-- Explore predictive modeling for sales forecasting
-- Expand dashboard access across departments for unified reporting
