@@ -59,7 +59,7 @@ Key issues included:
    - Identified duplicate transactions and multi-currency inconsistencies.  
    - Calculated top / bottom 5 markets by total revenue.
 
-These queries formed the foundation for modeling and dashboarding later in Power BI, ensuring accurate metrics validation and clean relationships between dimension and fact tables.
+The SQL Queries formed the foundation for modeling and dashboarding later in Power BI, ensuring accurate metrics validation and clean relationships between dimension and fact tables.
 
 <details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
 Used SQL to explore and extract sales insights from AtliQ Hardware’s sales database, consisting of **5 tables**:
