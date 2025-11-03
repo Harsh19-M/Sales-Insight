@@ -1,0 +1,11 @@
+DAX Expressions: 
+
+
+Cleaning/Removing the Inaccurate/Missing Value records - where sales amount (total amount in INR) less than equal to zero: 
+= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
+
+
+Normalizing Converting the transactions in USD to INR amount: 
+= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
+
+
