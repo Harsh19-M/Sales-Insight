@@ -156,6 +156,13 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
    * Lucknow	– `₹3,094,007`
    * Patna	– `₹4,428,393`
 
+
+**Further Querying revelead:**
+<br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
+
+
+So I concluded that it would be beneficial/logical to keep the "INR#(cr)" and "USD#(cr)"  currency values in our dashboard built in Power BI <br>
+
 These SQL queries served as preliminary data exploration steps to validate joins, assess data quality, and gain a basic understanding of key business metrics prior to performing deeper analysis, transformation and visualization in Power BI.
 
 </details>
@@ -168,19 +175,13 @@ These SQL queries served as preliminary data exploration steps to validate joins
    - Removed all the transactions where sales amount (total amount in INR) was either 0 or less.
    - Standardized all figures to **INR** using a fixed 2020 rate (USD × 75.63).
    
-<details> <summary><b>Key SQL Queries & Insights (Click to Expand)</b></summary>
+<details> <summary><b>Key Power BI DAX-Expressions (Click to Expand)</b></summary>
 **Star Schema:**
 <br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
 
 
 <br>
 
-
-**Further Querying revelead:**
-<br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
-
-
-So I concluded that it would be beneficial/logical to keep the "INR#(cr)" and "USD#(cr)"  currency values in our dashboard built in Power BI <br>
 **NOTE: "INR\r" and "USD\r" in SQL Queries are same as"INR#(cr)" and "USD#(cr)" in Power BI formulas**
 
 <br>
