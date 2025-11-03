@@ -1,4 +1,4 @@
-# AtliQ Hardware Sales Insights Dashboard
+# AtliQ Hardware Sales Insights Project
 
 A **data-driven business intelligence project** analyzing AtliQ Hardware’s multi-year sales performance using **MySQL + Power BI**.  
 This dashboard uncovers hidden insights behind **declining company sales despite apparent market growth**, helping leadership identify high-ROI markets and fix reporting inefficiencies.
