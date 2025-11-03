@@ -22,12 +22,12 @@ This dashboard uncovers hidden insights behind **declining company sales despite
 
 
 
-# 🧩 AtliQ Hardware Sales Insights Case Study
+# AtliQ Hardware Sales Insights Case Study
 **A Data-Driven Sales Performance Dashboard built using SQL (exploration) and Power BI (cleaning, modeling & visualization)**  
 
 ---
 
-## 🏢 Business Context
+## Business Context
 AtliQ Hardware is a computer hardware manufacturer that supplies peripherals across India.  
 As the company expanded into new markets, its management team — led by **Bhavin Patel (Sales Director)** — began noticing mismatched sales trends across regions.  
 Despite apparent *market growth*, **total revenue kept declining each year**.  
@@ -35,7 +35,7 @@ This project aimed to identify the root causes behind those inconsistencies and 
 
 ---
 
-## 🎯 Business Problem
+## Business Problem
 AtliQ’s existing manual Excel reports led to inconsistent and delayed insights, making strategic decision-making difficult.  
 Key issues included:
 - Fragmented sales data scattered across regions.  
@@ -44,14 +44,14 @@ Key issues included:
 
 ---
 
-## ⚙️ Key Challenges
+## Key Challenges
 1. **Data Fragmentation:** No centralized data source or reliable reporting structure.  
 2. **Data Quality Issues:** Duplicates, invalid transactions (`sales_amount ≤ 0`), and mixed currencies (USD vs INR).  
 3. **Misinterpreted Market Growth:** Sales expansion mistaken for revenue growth due to unvalidated reporting.  
 
 ---
 
-## 🧭 Approach Overview
+## Approach Overview
 **Framework Used:** AIMS Grid – *(Assumptions | Information | Methodology | Solutions)*  
 
 1. **Data Exploration (MySQL):**  
@@ -215,7 +215,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-## 📊 Key Insights
+## Key Insights
 - **Revenue Decline Identified:** Despite new markets, yearly sales fell from 2017 → 2020.  
 - **Top Markets:** Delhi NCR and Mumbai contributed ~70 % of revenue.  
 - **Efficient Markets:** Lucknow, Surat and Bhubaneshwar showed strong ROI despite low absolute sales.  
@@ -224,7 +224,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-## 💡 Business Impact
+## Business Impact
 | **Metric** | **Before** | **After** |
 |-------------|-------------|------------|
 | Data Quality | Inconsistent & duplicated | Cleaned & standardized dataset |
@@ -234,7 +234,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-## 🧠 Tools & Techniques
+## Tools & Techniques
 | **Category** | **Used For** |
 |---------------|--------------|
 | AIMS Grid | Defining Project Purpose, Stakeholders, End Result, Success Critera|
@@ -246,7 +246,7 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-## 📈 Key Outcomes
+## Key Outcomes
 - Built an **interactive Power BI dashboard** consolidating all sales data.  
 - Reframed company’s “growth narrative” — sales were declining despite market expansion.  
 - Delivered real-time visibility into KPIs and profit trends across markets.  
@@ -256,13 +256,13 @@ These SQL queries served as preliminary data exploration steps to validate joins
 ---
 
 ## 🔗 Deliverables
-- 📊 **Executive Deck:** [View Slides](your-slides-link-here)  
-- 🧾 **GitHub README:** [Detailed Project Story](your-readme-link-here)  
-- 💻 **Interactive Dashboard:** [View Dashboard](your-powerbi-link-here)
+- **Executive Deck:** [View Slides](your-slides-link-here)  
+- **GitHub README:** [Detailed Project Story](your-readme-link-here)  
+- **Interactive Dashboard:** [View Dashboard](your-powerbi-link-here)
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 - Add advanced SQL for profit ratio and market efficiency analysis.  
 - Automate data refresh pipeline from MySQL → Power BI.  
 - Expand KPIs to include customer retention and product-level profitability.  
@@ -270,68 +270,5 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 ---
 
-👨‍💻 *Developed by Harsh Mishra*  
-📬 *Open for Data Analyst / BI opportunities*  
-
-
-
-
-
-
-
-
-
-
-The Power BI Report contains 3 structured pages — **1. Executive Summary**, **2. Profit Analysis**, and **3. Performance Insights** — designed to simulate a real-world business reporting scenario.
-
-**Steps Taken:**
-
-* Imported all 5 tables into Power BI: `Products`, `Customers`, `Markets`, `Date`, `Transactions`.
-* Organized tables in a **Star Schema** — with `Transactions` as the **Fact Table**.
-* **Automatic Relationships:**
-
-  * `Products` ↔ `Transactions` (via `product_code`)
-  * `Customers` ↔ `Transactions` (via `customer_code`)
-    
-* **Manual Relationships (created in Model View):**
-
-  * `Markets` ↔ `Transactions` (`markets_code` ↔ `market_code`)
-  * `Date` ↔ `Transactions` (`date` ↔ `order_date`)
-
-This ensured proper relational integrity for building measures, aggregations, and visualizations.
-
-**Star Schema:**
-<br><img width="626" height="303" alt="image" src="https://github.com/user-attachments/assets/b6ed9d0b-4000-4b20-90b2-3b7b7d58fcf6" />
-
-
-<br>
-
-
-**Further Querying revelead:**
-<br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
-
-
-So I concluded that it would be beneficial/logical to keep both INR\r and USD\r currency values in our dashboard built in Power BI <br>
-**NOTE: "INR\r" and "USD\r" in SQL Queries are same as"INR#(cr)" and "USD#(cr)" in Power BI formulas**
-
-- There were Duplicate Records - 1 and 1 duplicate of 2 other transactions in USD - so we must filter thoses ones out.
-- INR\r and USD\r | INR#(cr)" and "USD#(cr) - are the ones we will keep in Power BI and I'll keep in Power BI and cleanup the others INR and USD 
-- Removing/Cleaning out those sales_amount values that are less than equal to 0. Not replacing them with the mean value. Simply removing them.
-  
-<br>
-
-**Final Currency values being used:** <br>
-`
-= Table.SelectRows(#"Removing - values <= 0", each ([currency] = "INR#(cr)" or [currency] = "USD#(cr)"))
-`
-<br>
-
-<br>
-
-**The Normalized values for the USD currency to INR (as of 2020 - last updated) would be:** <br>
-`
-= Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
-`
-<br>
-<br>
-
+*Developed by Harsh Mishra*  
+*Open for Data Analyst / BI opportunities*  
