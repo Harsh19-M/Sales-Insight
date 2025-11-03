@@ -160,8 +160,7 @@ Used SQL to explore and extract sales insights from AtliQ Hardware’s sales dat
 
 **Further Querying revelead:**
 <br><img width="752" height="206" alt="image" src="https://github.com/user-attachments/assets/bc9b3eae-c5cb-4bc5-9862-9eef66561a36" />
-
-So I concluded that it would be beneficial/logical to keep the "INR#(cr)" and "USD#(cr)"  currency values in our dashboard built in Power BI <br>
+So here I noticed that there were 2 duplicate records of the same transactions "USD/r" and "USD", after looking at the whole dataset I figured out the whole dataset in either "INR/R" or "USD/R" and these 2 transactions in "USD" are duplicate records. So we will clean them in Power BI and build the dashboard with these values removed. <br>
 
 
 **These SQL queries served as preliminary data exploration steps to validate joins, assess data quality, and gain a basic understanding of key business metrics prior to performing deeper analysis, transformation and visualization in Power BI.**
