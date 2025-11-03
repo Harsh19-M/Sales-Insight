@@ -183,7 +183,6 @@ These SQL queries served as preliminary data exploration steps to validate joins
 
 <br>
 
-**NOTE: "INR\r" and "USD\r" in SQL Queries are same as"INR#(cr)" and "USD#(cr)" in Power BI formulas**
 
 <br>
 
