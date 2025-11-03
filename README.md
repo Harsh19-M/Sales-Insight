@@ -199,6 +199,9 @@ These SQL queries served as preliminary data exploration steps to validate joins
 = Table.AddColumn(#"Cleanup currency", "Norm_sales_amount", each if [currency] = "USD#(cr)" then [sales_amount]*75.63 else[sales_amount])
 `
 
+<br>
+
+**The 2 transactions in USD currency have converted to INR amount in Noramlized sales column:** <br>
 <img width="971" height="58" alt="image" src="https://github.com/user-attachments/assets/997fc9bd-47e7-4236-b2c0-b09c4ea6e373" />
 
 <br>
