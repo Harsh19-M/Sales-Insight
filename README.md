@@ -13,7 +13,6 @@ This dashboard uncovers hidden insights behind declining company sales despite a
 ## Tools & Skills
 **SQL**, **Power BI**, **DAX**, **Data Modeling**, **ETL**, **Data Cleaning**, **Business Analysis**
 
----
 
 **Live Dashboard:** [View Power BI Report](your-link-here)  
 **Executive Presentation Deck:** [View Google Slides](https://docs.google.com/presentation/d/1e68ZcCHOzPbsdyf8bYjK0_WDwdPrHvC-m7F55FYTLYE/present)  
