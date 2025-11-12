@@ -21,7 +21,6 @@ This dashboard uncovers hidden insights behind declining company sales despite a
 
 
 
-
 # AtliQ Hardware Sales Insights (Approach & Findings)
 **A Data-Driven Sales Performance Dashboard built using SQL (exploration) and Power BI (cleaning, modeling & visualization)**  
 
