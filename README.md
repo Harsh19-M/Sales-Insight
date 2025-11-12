@@ -11,7 +11,7 @@ This dashboard uncovers hidden insights behind declining company sales despite a
 - Replaced manual Excel reporting with automated, real-time insights.
 
 ## Tools & Skills
-**SQL** | **Power BI - Dashboard Tools & DAX** | **Data Modeling** | **ETL** | **Data Cleaning** | **Business Analysis**
+**SQL(MySQL)** | **Power BI - Dashboard Tools & DAX** | **Data Modeling** | **ETL** | **Data Cleaning** | **Business Analysis**
 
 
 **Live Dashboard:** [View Power BI Report](your-link-here)  
