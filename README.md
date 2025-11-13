@@ -8,7 +8,7 @@ This dashboard uncovers hidden insights behind declining company sales despite a
 - **Disproved false growth assumption** — sales dropped YoY (2017–2020) despite expanding markets.  
 - Normalized multi-currency transactions (USD → INR), removed duplicates, and validated data integrity.  
 - Identified **Delhi NCR & Mumbai** as top-grossing but **Lucknow & Surat** as most efficient markets.  
-- Replaced manual Excel reporting with automated, real-time insights.
+- Replaced manual Excel reporting with automated, interactive (YoY - monthly) insights.
 
 ## Tools & Skills
 **SQL(MySQL)** | **Power BI - Dashboard Tools & DAX** | **Data Modeling** | **ETL** | **Data Cleaning** | **Business Analysis**
