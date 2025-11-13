@@ -29,7 +29,7 @@ This dashboard uncovers hidden insights behind declining company sales despite a
 AtliQ Hardware is a computer hardware manufacturer that supplies peripherals across India.  
 As the company expanded into new markets, its management team — led by **Bhavin Patel (Sales Director)** — began noticing mismatched sales trends across regions.  
 The Sales Director had made the assumption: **Despite apparent market growth, total revenue kept declining each year**.  
-This project aimed to identify the root causes behind those inconsistencies and build a unified reporting system for real-time insights.
+This project aimed to identify the root causes behind those inconsistencies and build a unified reporting system for interactive YoY insights.
 
 ---
 
